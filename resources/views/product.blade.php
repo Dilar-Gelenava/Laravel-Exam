@@ -4,13 +4,13 @@
     </form>
     @auth()
         @if(isset($in_cart))
-            <form action="{{ Route('add_to_cart') }}">
-                <input type="hidden" name="product_id" value={{ $product_id }}>
+            <form action="{{ Route('addToCart') }}">
+                <input type="hidden" name="product_id" value={{ $product->id }}>
                 <button type="submit">add to cart</button>
             </form>
         @else
-            <form action="{{ Route('add_to_cart') }}">
-                <input type="hidden" name="product_id" value={{ $product_id }}>
+            <form action="{{ Route('addToCart') }}">
+                <input type="hidden" name="product_id" value={{ $product->id }}>
                 <button type="submit">remove from cart</button>
             </form>
         @endif
